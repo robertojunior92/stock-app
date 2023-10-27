@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+    background-color: #002b3d;
+    font-family: Montserrat, sans-serif;
+}
+
+#header {
+    font-size: 35px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.11;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin: 15px;
+    display: table;
+}
+
+.card {
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+.card-header {
+    border-radius: 8px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #116e8a;
+    height: 70px;
+}
+.card-header-title {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+    /*overflow: hidden;*/
+    /*white-space: nowrap;*/
+    /*text-overflow: ellipsis;*/
+    width: 80%;
+    display: inline-block;
+    height: 2.3em;
+    overflow: hidden;
+}
+.card-header-id {
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.15;
+    letter-spacing: normal;
+    text-align: left;
+    float: right;
+    color: #00dbfd;
+}
+
+.card-header-id a{
+    color: #00dbfd;
+}
+
+.card-to {
+    border-radius: 50%;
+    width: 98px;
+    height: 98px;
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.22);
+    border: solid 1px #ffffff;
+}
+
+.card-time-estimated {
+    font-size: 21px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: center;
+    color: #00bad7;
+    /* margin-top: 50%; */
+}
+
+
+.card-time-elapsed {
+    font-size: 21px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2eb681;
+    margin-top: 50%;
+}
+
+.card-label {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    color: #606060;
+    margin-top: 20px;
+}
+
+.card-line {
+    text-align: center;
+}
+
+.card-deadline {
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.73;
+    letter-spacing: normal;
+    color: #f9ae08;
+    margin-top: 22px;
+}
+.card-requester {
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.73;
+    letter-spacing: normal;
+    color: #777677;
+    margin-top: 22px;
+}
+
+.card-from {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.22);
+    border: solid 1px #ffffff;
+    margin-top: 5px;
+}

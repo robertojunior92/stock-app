@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+body {
+    background-color: #002b3d;
+    font-family: Poppins, sans-serif;
+}
+
+#left-bar {
+    background-color: #eff0f5;
+    font-size: 14px;
+}
+
+.project-info {
+    height: 40%;
+    background-color: #fff;
+    font-size: 13px;
+}
+
+.project-info-label {
+    margin: 10px;
+    /*font-weight: bold;*/
+    color: #686868;
+}
+
+#header {
+    font-size: 35px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.11;
+    letter-spacing: normal;
+    color: #777677;
+    margin: 15px;
+    display: table;
+}
+
+.card {
+    background-color: #fff;
+    margin: 10px 0;
+}
+
+.card-body {
+    background-color: #fff;
+    height: 285px;
+}
+
+.card-header {
+    border-radius: 8px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #116e8a;
+    height: 70px;
+}
+
+.card-header-title {
+    font-size: 22px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.card-header-title a {
+    color: #fff;
+}
+
+.card-header-title a:hover {
+    text-decoration: underline;
+}
+
+.card-executant {
+    border-radius: 50%;
+    width: 47px;
+    height: 47px;
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.22);
+    border: solid 1px #ffffff;
+    margin: 0 auto;
+    display: block;
+}
+
+.card-time-estimated {
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: center;
+    color: #00bad7;
+    margin-top: 30px;
+}
+
+.card-time-elapsed {
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2eb681;
+    margin-top: 30px;
+}
+
+.card-percentage {
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: center;
+    color: #f9ae08;
+    margin-top: 30px;
+}
+
+.card-label {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    color: #777677;
+    margin-top: 20px;
+}
+
+.card-line {
+    text-align: center;
+}
+
+.card-deadline {
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.73;
+    letter-spacing: normal;
+    color: #f9ae08;
+    margin-top: 22px;
+}
+
+.card-requester {
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.73;
+    letter-spacing: normal;
+    color: #777677;
+    margin-top: 22px;
+}
+
+.card-from {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.22);
+    border: solid 1px #ffffff;
+    margin-top: 5px;
+}
+
+.card-status {
+    font-size: 19px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    height: 2.5em;
+    overflow: hidden;
+}
+
+.card-status a {
+    color: #116e8a;
+}
+
+.card-status-idle {
+    font-size: 19px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.73;
+    letter-spacing: normal;
+    color: #ef2555;
+}
+
+.card-time-idle {
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ef2555;
+    margin-top: 50%;
+}
+
+.card-header-id {
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.15;
+    letter-spacing: normal;
+    text-align: left;
+    float: right;
+    color: #00dbfd;
+}
+
+.card-header-id a {
+    color: #00dbfd;
+}
+
+a, i, span {
+    display: inline-block;
+    text-decoration: none;
+}
+
+a:hover, a:focus, i:hover, i:focus, span:hover, span:focus {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.timeline .users-like a {
+    margin: 0 -1.6rem 0 0;
+    transition: all 0.4s ease;
+}
+
+.timeline .users-like a:hover {
+    margin-right: -.3rem;
+}
+
+.timeline .users-like img {
+    width: 40px;
+    border: .25rem solid #fff;
+}
+
+.tasks {
+    margin-top: 10px;
+}
+
+.tasks-title {
+    height: 40px;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.54;
+    letter-spacing: normal;
+    text-align: center;
+    margin: 0 0 5px 0;
+}
+
+.tasks-title a {
+    color: #676767;
+}
+
+.tasks-title a:hover {
+    text-decoration: underline;
+}
+
+.tasks-stage {
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: center;
+    color: #a4a4a4;
+}
+
+.line {
+    width: 89%;
+    height: 1px;
+    border: 0.7px dotted #a4a4a4;
+    bottom: 60px;
+    position: absolute;
+    z-index: 1;
+    margin: 0 41px;
+}

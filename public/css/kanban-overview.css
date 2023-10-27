@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+    background-color: #002b3d;
+    font-family: Montserrat, sans-serif;
+}
+
+#header {
+    font-size: 35px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.11;
+    letter-spacing: normal;
+    color: #777677;
+    margin: 15px;
+    display: table;
+}
+
+.card {
+    background-color: #fff;
+    margin: 10px;
+}
+.card-body {
+    background-color: #fff;
+    /* height: 285px; */
+}
+.card-header {
+    border-radius: 8px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #116e8a;
+}
+.card-header-title {
+    font-size: 22px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+    /*overflow: hidden;*/
+    /*white-space: nowrap;*/
+    /*text-overflow: ellipsis;*/
+    display: inline-block;
+}
+
+.card-to {
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.22);
+    border: solid 1px #ffffff;
+}
+
+.card-time-estimated {
+    font-size: 17px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: center;
+    color: #00bad7;
+    margin-top: 50%;
+}
+
+
+.card-time-due {
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ff8800;
+    margin-top: 50%;
+}
+
+.card-time-elapsed {
+    font-size: 17px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2eb681;
+    margin-top: 50%;
+}
+
+.card-label {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    color: #777677;
+    margin-top: 20px;
+}
+
+.card-line {
+    text-align: center;
+}
+
+.card-deadline {
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.73;
+    letter-spacing: normal;
+    color: #f9ae08;
+    margin-top: 22px;
+}
+.card-requester {
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.73;
+    letter-spacing: normal;
+    color: #777677;
+    margin-top: 22px;
+}
+
+.card-from {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.22);
+    border: solid 1px #ffffff;
+    margin-top: 5px;
+}
+
+.card-status {
+    font-size: 19px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    height: 2.5em;
+    overflow: hidden;
+}
+
+.card-status a {
+    color: #116e8a;
+}
+
+.card-status-idle {
+    font-size: 19px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.73;
+    letter-spacing: normal;
+    color: #ef2555;
+}
+
+.card-time-idle {
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ef2555;
+    margin-top: 50%;
+}
+
+.card-header-id {
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.15;
+    letter-spacing: normal;
+    text-align: left;
+    float: right;
+    color: #00dbfd;
+}
+
+.card-header-id a{
+    color: #00dbfd;
+}
+
+
+.panel{
+    border: 1px solid #002b3d;
+    padding: 15px;
+    background-color: #0c4d69e3;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.panel-heading{
+    font-size: 24px;
+    font-weight: 600;
+    color: #00a3d4;
+}
+
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+.label-default {
+    background-color: #777;
+}
