@@ -174,7 +174,7 @@
                         <li><a href="{{route('product-entry')}}"><i class="fas fa-arrow-left" style="color: white;"></i>&nbsp Entrada de Produtos</a></li>
                         <li><a href="{{route('product-output')}}"><i class="fas fa-arrow-right" style="color: white;"></i>&nbsp Saída de Produtos</a></li>
                         <li><hr></li>
-                        <li><a href="{{route('product-quick-registration')}}"><i class="fas fa-th-large" style="color: white;"></i>&nbsp Cadastro de Categoria</a></li>
+                        <li><a href="{{route('product-category-registration')}}"><i class="fas fa-th-large" style="color: white;"></i>&nbsp Cadastro de Categoria</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">

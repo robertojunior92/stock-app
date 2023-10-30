@@ -35,9 +35,11 @@ Route::group([
     Route::get('/search-products-in-stock', 'ProductsController@searchProductsInStock')->name("search-products-in-stock");
     Route::get('/data-product', 'ProductsController@getDadosProductsById')->name('data-product');
     Route::post('/insert-products', 'ProductsController@insertProducts')->name('insert-products');
-    Route::post('/update-product', 'ProductsController@updateProduct')->name('update-product');
+    Route::post('/update-products', 'ProductsController@updateProduct')->name('update-products');
     Route::post('/delete-product', 'ProductsController@deleteAlimento')->name('delete-product');
 
+    Route::get('/product-category-registration', 'CategoryController@productCategoryRegistration')->name('product-category-registration');
+    Route::post('/insert-category', 'CategoryController@insertCategory')->name('insert-category');
 
 
 });

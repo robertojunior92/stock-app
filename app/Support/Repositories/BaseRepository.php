@@ -42,35 +42,6 @@ abstract class BaseRepository
     }
 
     /**
-     * @return array
-     */
-    public static function getHosts()
-    {
-        $appEnv = env("APP_ENV");
-        $dbHost = env("DB_HOST");
-
-        if ($appEnv == 'local' || $appEnv == 'testing' || $dbHost == 'localhost' || $dbHost == '127.0.0.1') {
-            return [$dbHost];
-        }
-
-        if ($dbHost == 'feegow.cluster-c9b9qzucevj0.us-east-1.rds.amazonaws.com') {
-            return [$dbHost]; // homolog
-        }
-
-        return [ // production
-            "dbfeegow-01.feegow.com",
-            "dbfeegow-02.feegow.com",
-            //"dbfeegow-03.feegow.com",
-            "dbfeegow-04.feegow.com",
-            "dbfeegow-05.feegow.com",
-            "dbfeegow-06.feegow.com",
-            "dbfeegow-07.feegow.com",
-            "dbfeegow-08.feegow.com",
-        ];
-    }
-
-
-    /**
      * @param $data
      *
      * @return mixed
