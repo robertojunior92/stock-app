@@ -88,7 +88,7 @@ class ProductsController extends Controller
 
             // Verifica se a quantidade a ser subtraída não é maior que a quantidade em estoque
             if ($quantity_to_subtract > $product['quantity_in_stock']) {
-                return ["success" => 0, "mensagem" => "Quantidade insuficiente em estoque"];
+                return ["success" => 0, "mensagem" => "Quantidade insuficiente no estoque"];
             }
 
             $newQuantity = $product['quantity_in_stock'] - $request->input('qtd');
