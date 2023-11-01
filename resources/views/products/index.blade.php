@@ -202,7 +202,7 @@
                         delete data.id;
                     }
 
-                    let url = this.modoEdicao ? '{{ route("update-products") }}' : '{{ route("insert-products") }}'; // Substitua pelas rotas corretas
+                    let url = this.modoEdicao ? '{{ route("update-product") }}' : '{{ route("insert-products") }}'; // Substitua pelas rotas corretas
 
                     // Configuração dos cabeçalhos (adicionar o token CSRF)
                     let headers = {
