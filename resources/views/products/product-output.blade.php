@@ -58,7 +58,7 @@
 
                     let ProductID   = $('#ProductID').val();
                     let qtd         = $('#qtd').val();
-                    let type_entry  = 'O';
+                    let type_entry  = 'X';
 
                     let data = {
                         ProductID: ProductID,

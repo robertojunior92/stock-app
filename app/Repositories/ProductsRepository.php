@@ -50,7 +50,7 @@ class ProductsRepository extends BaseRepository
         ]);
 
         if ($id) {
-            $this->insertStockMovements($id, Constants::ENTRY_STOCK, $quantity_in_stock, $now, Constants::ENTRY_PRODUCT_DESC);
+            $this->insertStockMovements($id, Constants::MOVEMENT_ENTRY_STOCK, $quantity_in_stock, $now, Constants::MOVEMENT_ENTRY_PRODUCT_DESC);
         }
         return true;
     }
@@ -95,7 +95,23 @@ class ProductsRepository extends BaseRepository
     }
     public function updateProduct(array $data, $id)
     {
-        return $this->update("products", $data, ["id" => $id]);
+        if($data['type_movement']){
+            $now = date('Y-m-d H:i:s');
+
+            $dataUpdate = [
+                'product_name'      => $data['product_name'],
+                "category"          => $data['category'],
+                "unit_price"        => $data['unit_price'],
+                "status"            => $data['status'],
+                "image"             => $data['image'],
+                "date_out"          => $data['date_out'],
+                "quantity_in_stock" => $data['quantity_in_stock']
+                ];
+            $this->update("products", $dataUpdate, ["id" => $id]);
+            return $this->insertStockMovements($id, $data['type_movement'], $data['quantity_in_stock'], $now, $data['desc_movement']);
+        }else{
+            return $this->update("products", $data, ["id" => $id]);
+        }
     }
     private function insertStockMovements($product_id, $movement_type, $quantity, $now, $description)
     {
@@ -105,8 +121,6 @@ class ProductsRepository extends BaseRepository
             'quantity'      => $quantity,
             'date'          => $now,
             'description'   => $description
-
-
         ]);
 
     }
@@ -125,7 +139,7 @@ class ProductsRepository extends BaseRepository
     }
     public function getTotalEntryStock()
     {
-        $sql = "SELECT SUM(p.quantity) totalEntryStock FROM stock_movements p WHERE movement_type = '".Constants::ENTRY_STOCK."' ";
+        $sql = "SELECT SUM(p.quantity) totalEntryStock FROM stock_movements p WHERE movement_type = '".Constants::MOVEMENT_ENTRY_STOCK."' ";
         $result = $this->raw($sql);
         return $this->rawAsArray($result, 'totalEntryStock');
     }

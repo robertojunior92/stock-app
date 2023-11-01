@@ -50,7 +50,7 @@ class ProductsController extends Controller
     {
         $type_entry = $request->input('type_entry');
 
-        if ($type_entry === Constants::ENTRY_STOCK){
+        if ($type_entry === Constants::MOVEMENT_ENTRY_STOCK){
 
             $product_id = $request->input('ProductID');
             $product = $this->productsService->findProductById($product_id);
@@ -68,17 +68,27 @@ class ProductsController extends Controller
                 'status'            => $product['status'],
                 'image'             => $product['image'],
                 'date_out'          => null,
-                'quantity_in_stock' => $newQuantity, // Atualiza a quantidade
+                'quantity_in_stock' => $newQuantity, // Atualiza a quantidade,
+                'type_movement'     => $type_entry,
+                'desc_movement'     => Constants::MOVEMENT_ENTRY_PRODUCT_DESC
             ];
 
             // Chame o serviço para atualizar o produto
             $this->productsService->updateProduct($data, $product_id);
-        }else if ($type_entry === Constants::OUT_STOCK){
+        }else if ($type_entry === Constants::MOVEMENT_EXIT_STOCK){
             $product_id = $request->input('ProductID');
             $product = $this->productsService->findProductById($product_id);
 
             if (!$product) {
                 return ["success" => 0, "mensagem" => "Produto não encontrado"];
+            }
+
+            // Quantidade a ser subtraída
+            $quantity_to_subtract = $request->input('qtd');
+
+            // Verifica se a quantidade a ser subtraída não é maior que a quantidade em estoque
+            if ($quantity_to_subtract > $product['quantity_in_stock']) {
+                return ["success" => 0, "mensagem" => "Quantidade insuficiente em estoque"];
             }
 
             $newQuantity = $product['quantity_in_stock'] - $request->input('qtd');
@@ -90,7 +100,9 @@ class ProductsController extends Controller
                 'status'            => $product['status'],
                 'image'             => $product['image'],
                 'date_out'          => null,
-                'quantity_in_stock' => $newQuantity, // Atualiza a quantidade
+                'quantity_in_stock' => $newQuantity, // Atualiza a quantidade,
+                'type_movement'     => $type_entry,
+                'desc_movement'     => Constants::MOVEMENT_EXIT_PRODUCT_DESC
             ];
 
             // Chame o serviço para atualizar o produto
